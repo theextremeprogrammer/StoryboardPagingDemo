@@ -1,25 +1,164 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Root View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RootViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="768" y="919.89333333333343"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="Qms-3k-0Jd">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="A3e-vv-A1Q" sceneMemberID="viewController">
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Yz-iu-M17" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="768" y="1748"/>
+        </scene>
+        <!--Page1 View Controller-->
+        <scene sceneID="ffr-jP-N7r">
+            <objects>
+                <viewController storyboardIdentifier="Page1VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rwp-QZ-ckj" customClass="Page1ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uGi-sA-8xW"/>
+                        <viewControllerLayoutGuide type="bottom" id="F5a-Q6-6mp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L7j-aW-IPh">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gxD-f1-Pdy">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
+                                <items>
+                                    <navigationItem title="Page 1" id="uqu-eA-3pH">
+                                        <barButtonItem key="rightBarButtonItem" title="Page 2" id="ldi-WX-1im">
+                                            <connections>
+                                                <action selector="page2ButtonTapped:" destination="Rwp-QZ-ckj" id="qyC-Vq-JoT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page 1 VC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gl7-b9-O0t">
+                                <rect key="frame" x="471" y="373" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Phg-eB-EaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-288" y="2584"/>
+        </scene>
+        <!--Page2 View Controller-->
+        <scene sceneID="hPf-xj-lt0">
+            <objects>
+                <viewController storyboardIdentifier="Page2VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xkR-4F-ODJ" customClass="Page2ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wwc-TY-iDG"/>
+                        <viewControllerLayoutGuide type="bottom" id="b1N-Rj-BLi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L9S-Kz-KAT">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cEp-mX-GXa">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
+                                <items>
+                                    <navigationItem title="Page 2" id="ODs-Qt-Jld">
+                                        <barButtonItem key="leftBarButtonItem" title="Page 1" id="bdu-59-i6L">
+                                            <connections>
+                                                <action selector="page1ButtonTapped:" destination="xkR-4F-ODJ" id="bRL-bN-ygQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Page 3" id="tNM-yW-HDK">
+                                            <connections>
+                                                <action selector="page3ButtonTapped:" destination="xkR-4F-ODJ" id="fjD-tC-1cD"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page 2 VC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ml1-Dt-9s4">
+                                <rect key="frame" x="471" y="373" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sf9-Zj-C9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="768" y="2584"/>
+        </scene>
+        <!--Page3 View Controller-->
+        <scene sceneID="BJt-jG-uft">
+            <objects>
+                <viewController storyboardIdentifier="Page3VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Kmd-Sy-GUD" customClass="Page3ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RmN-G4-oDO"/>
+                        <viewControllerLayoutGuide type="bottom" id="6vf-Kb-kAP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LQg-xo-q8a">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yg9-nx-Vi3">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
+                                <items>
+                                    <navigationItem title="Page 3" id="1jx-51-xxl">
+                                        <barButtonItem key="leftBarButtonItem" title="Page 2" id="2Cl-Nb-ZM6">
+                                            <connections>
+                                                <action selector="page2ButtonTapped:" destination="Kmd-Sy-GUD" id="1KD-IT-dR2"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page 3 VC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnQ-z0-Qis">
+                                <rect key="frame" x="471" y="373" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vns-BG-V42" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1828" y="2584"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
 </document>
